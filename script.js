@@ -1,7 +1,6 @@
 function passordSjekker() {
   const passord = document.querySelector("#passord").value;
   const resultat = document.querySelector("#resultat");
-  pasord = passord.trim(); // fjerner mellomrom i starten og slutten av passordet
   for (let i = 0; i < passord.length; i++) {
     if (
       passord.charAt(0) === passord.charAt(0).toUpperCase() &&
@@ -31,6 +30,15 @@ function passordSjekker() {
   }
 } //henter det man skriver og sjekker om den starter med stor bokstav og har spesialtegn og gir en alert med passordet og en melding om at det er bra, greit nok eller ikke bra nok
 
+function visPassord() {
+  const passordInput = document.querySelector("#passord");
+  if (passordInput.type === "password") {
+    passordInput.type = "text";
+  } else {
+    passordInput.type = "password";
+  }
+}
+
 console.log("hello world"); //teste om js filen er linka med html filen
 function openingModal2() {
   document.getElementById("passordmodal").classList.remove("hiddenModal");
@@ -38,6 +46,7 @@ function openingModal2() {
 } // åpner modalen med at den legger til og fjener spesefike classes
 
 function closingModal2() {
+  resultat.textContent = "";
   document.getElementById("passordmodal").classList.remove("showModal");
   document.getElementById("passordmodal").classList.add("hiddenModal");
 } // lukker modalen med at den legger til og fjener spesefike classes åpner modalen med at den legger til og fjener spesefike classes
