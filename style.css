@@ -1,0 +1,45 @@
+body {
+  background-color: blanchedalmond;
+  font-family: Arial, Helvetica, sans-serif;
+} /* bakgrunn og font */
+h1 {
+  text-align: center;
+} /* overskrift */
+.hiddenModal {
+  display: none;
+} /* skjule modalen */
+
+.showModal {
+  display: block;
+} /* vise modalen */
+.modalInnhold {
+  align-items: center;
+  width: 300px;
+  background-color: black;
+  border: 2px solid white;
+  text-align: center;
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} /* innholdet på modalen */
+#passord {
+  margin-bottom: 10px;
+} /* lager mer plass inni modalen */
+.test:hover {
+  background-color: rgb(200, 247, 187);
+  box-shadow: 0px 7px 5px rgb(182, 181, 181);
+  cursor: pointer;
+} /* endrer på knappen når musen er over den */
+.test {
+  margin-left: 43%;
+} /* flytter knappen */
+#passordmodal {
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+} /* gjør det bak modalen mindre synlig sånn at modalen er midtpunktet */

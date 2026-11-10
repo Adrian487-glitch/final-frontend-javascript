@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width='device-width', initial-scale=1.0" />
+    <title>Passord sjekker</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- kobler til style.css -->
+  </head>
+  <body>
+    <h1>Passord sjekker</h1>
+    <!-- overskrift -->
+    <button onclick="openingModal2()" class="test">Test passordet her</button>
+    <!-- knapp for å åpne modalen -->
+    <div>
+      <div id="passordmodal" class="hiddenModal">
+        <div class="modalInnhold">
+          <input placeholder="Passord" type="text" id="passord" />
+          <button onclick="passordSjekker()">Test</button>
+          <!-- knapp for å teste passordet -->
+          <br />
+          <p id="resultat"></p>
+          <br />
+          <button onclick="closingModal2()">Lukk</button>
+          <!-- knapp for å lukke modalen -->
+        </div>
+      </div>
+    </div>
+    <script src="script.js" defer></script>
+    <!-- kobler til script.js -->
+  </body>
+</html>
