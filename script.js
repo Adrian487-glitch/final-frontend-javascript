@@ -55,9 +55,31 @@ function mørkemodus() {
   document.body.style.backgroundColor = "black";
   document.body.style.color = "white";
   document.querySelector("p").style.border = "5px solid white";
+  document.getElementById("mørkemodus").style.color = "black";
+  document.getElementById("mørkemodus").style.backgroundColor = "black";
+  document.getElementById("mørkemodus").style.border = "none";
+  document.getElementById("mørkemodus").style.boxShadow = "none";
+  document.getElementById("mørkemodus").style.cursor = "default";
+  document.getElementById("lysmodus").style.color = "black";
+  document.getElementById("lysmodus").style.backgroundColor = "blanchedalmond";
+  document.getElementById("lysmodus").style.border = "1px solid black";
+  document.getElementById("lysmodus").style.cursor = "pointer";
+  document.getElementById("lysmodus").style.boxShadow =
+    "0px 7px 5px rgb(182, 181, 181)";
 } // endrer bakgrunn, font til mørk modus og legger til en border på p taggen for å gjøre den mer synlig i mørk modus
 function lysmodus() {
   document.body.style.backgroundColor = "blanchedalmond";
   document.body.style.color = "black";
   document.querySelector("p").style.border = "5px solid black";
+  document.getElementById("lysmodus").style.color = "blanchedalmond";
+  document.getElementById("lysmodus").style.backgroundColor = "blanchedalmond";
+  document.getElementById("lysmodus").style.border = "none";
+  document.getElementById("lysmodus").style.boxShadow = "none";
+  document.getElementById("lysmodus").style.cursor = "default";
+  document.getElementById("mørkemodus").style.color = "black";
+  document.getElementById("mørkemodus").style.backgroundColor = "white ";
+  document.getElementById("mørkemodus").style.border = "1px solid black";
+  document.getElementById("mørkemodus").style.cursor = "pointer";
+  document.getElementById("mørkemodus").style.boxShadow =
+    "0px 7px 5px rgb(182, 181, 181)";
 } // endrer bakgrunn, font til lys modus og legger til en border på p taggen for å gjøre den mer synlig i lys modus
