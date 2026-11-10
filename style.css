@@ -99,3 +99,12 @@ p {
   cursor: pointer;
   border: 3px solid white;
 }
+.vis:hover {
+  cursor: pointer;
+  border: 3px solid white;
+}
+#passordmeter {
+  width: 50%;
+  height: 20px;
+  margin-top: 10px;
+}
