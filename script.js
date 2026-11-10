@@ -2,19 +2,27 @@ function passordSjekker() {
   const passord = document.querySelector("#passord").value;
   const pattern = /[`!@#$%^&*()_+\-=\[\]{};’:”\\|,.<>\/?~]/;
   const resultat = document.querySelector("#resultat");
-  if (passord[0] === passord[0].toUpperCase() && pattern.test(passord)) {
-    resultat.style.color = "green";
-    resultat.innerHTML = "Passordet er bra nok";
-  } else if (
-    (passord[0] === passord[0].toUpperCase() && !pattern.test(passord)) ||
-    (passord[0] !== passord[0].toUpperCase() && pattern.test(passord))
-  ) {
-    resultat.style.color = "orange";
-    resultat.innerHTML = "Passordet mangler spesial tegn eller stor bokstav";
-  } else {
-    resultat.style.color = "red";
-    resultat.innerHTML =
-      "Passordet er ikke bra nok mangler spesiall tegn eller stor bokstav";
+  for (let i = 0; i < passord.length; i++) {
+    if (passord[i] === passord[i].toUpperCase() && pattern.test(passord)) {
+      resultat.style.color = "green";
+      resultat.innerHTML = "Passordet er bra nok";
+    } else if (
+      passord[i] === passord[i].toUpperCase() &&
+      !pattern.test(passord)
+    ) {
+      resultat.style.color = "orange";
+      resultat.innerHTML = "Passordet mangler spesial tegn eller stor bokstav";
+    } else if (
+      passord[i] !== passord[i].toUpperCase() &&
+      pattern.test(passord)
+    ) {
+      resultat.style.color = "orange";
+      resultat.innerHTML = "Passordet mangler spesial tegn eller stor bokstav";
+    } else {
+      resultat.style.color = "red";
+      resultat.innerHTML =
+        "Passordet er ikke bra nok mangler spesiall tegn eller stor bokstav";
+    }
   }
 } //henter det man skriver og sjekker om den starter med stor bokstav og har spesialtegn og gir en alert med passordet og en melding om at det er bra, greit nok eller ikke bra nok
 

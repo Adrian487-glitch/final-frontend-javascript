@@ -25,6 +25,7 @@ h1 {
   transform: translate(-50%, -50%);
 } /* innholdet på modalen */
 #passord {
+  margin-top: 10px;
   margin-bottom: 10px;
 } /* lager mer plass inni modalen */
 .test:hover {
