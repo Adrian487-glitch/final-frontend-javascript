@@ -4,6 +4,7 @@ body {
 } /* bakgrunn og font */
 h1 {
   text-align: center;
+  margin-top: 2%;
 } /* overskrift */
 .hiddenModal {
   display: none;
@@ -14,7 +15,7 @@ h1 {
 } /* vise modalen */
 .modalInnhold {
   align-items: center;
-  width: 300px;
+  width: 500px;
   background-color: black;
   border: 2px solid white;
   text-align: center;
@@ -28,14 +29,20 @@ h1 {
   margin-top: 10px;
   margin-bottom: 10px;
 } /* lager mer plass inni modalen */
-.test:hover {
+.åpen:hover {
   background-color: rgb(200, 247, 187);
   box-shadow: 0px 7px 5px rgb(182, 181, 181);
   cursor: pointer;
 } /* endrer på knappen når musen er over den */
-.test {
-  margin-left: 46%;
-} /* flytter knappen */
+.åpen {
+  margin-top: 15%;
+  margin-left: 43%;
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 10px;
+} /*designe og flytte knappen */
 #passordmodal {
   background-color: rgba(0, 0, 0, 0.8);
   width: 100vw;
@@ -43,4 +50,31 @@ h1 {
   position: fixed;
   top: 0;
   left: 0;
-} /* gjør det bak modalen mindre synlig sånn at modalen er midtpunktet */
+} /* gjør det bak modalen mindre synlig sånn at modalen er mer midtpunktet */
+p {
+  margin-top: 50px;
+  border: 5px solid black;
+  width: 40%;
+  margin: auto;
+  text-align: center;
+  font-size: 20px;
+} /* endrer på paragrafen under knappen */
+.mørk {
+  margin-top: 10px;
+  margin-left: 45%;
+  width: 150px;
+  height: 25px;
+  text-align: center;
+  font-size: 20px;
+} /* designe og flytte knappen */
+.mørk:hover {
+  background-color: rgb(200, 247, 187);
+  box-shadow: 0px 7px 5px rgb(182, 181, 181);
+  cursor: pointer;
+} /* endrer på knappen når musen er over den */
+.lukk:hover {
+  cursor: pointer;
+}
+.test:hover {
+  cursor: pointer;
+}

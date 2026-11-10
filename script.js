@@ -1,27 +1,32 @@
 function passordSjekker() {
   const passord = document.querySelector("#passord").value;
-  const pattern = /[`!@#$%^&*()_+\-=\[\]{};’:”\\|,.<>\/?~]/;
   const resultat = document.querySelector("#resultat");
+  pasord = passord.trim(); // fjerner mellomrom i starten og slutten av passordet
   for (let i = 0; i < passord.length; i++) {
-    if (passord[i] === passord[i].toUpperCase() && pattern.test(passord)) {
+    if (
+      passord.charAt(0) === passord.charAt(0).toUpperCase() &&
+      /[!@#$%^&*(),.?":{}|<>]/.test(passord) &&
+      passord.length >= 5
+    ) {
       resultat.style.color = "green";
-      resultat.innerHTML = "Passordet er bra nok";
+      resultat.textContent =
+        "Passordet ditt er: " + passord + " og det er bra.";
+      break;
     } else if (
-      passord[i] === passord[i].toUpperCase() &&
-      !pattern.test(passord)
+      passord.charAt(0) === passord.charAt(0).toUpperCase() ||
+      /[!@#$%^&*(),.?":{}|<>]/.test(passord)
     ) {
       resultat.style.color = "orange";
-      resultat.innerHTML = "Passordet mangler spesial tegn eller stor bokstav";
-    } else if (
-      passord[i] !== passord[i].toUpperCase() &&
-      pattern.test(passord)
-    ) {
-      resultat.style.color = "orange";
-      resultat.innerHTML = "Passordet mangler spesial tegn eller stor bokstav";
+      resultat.textContent =
+        "Passordet ditt er: " +
+        passord +
+        " og det er greit nok men bør være lengre.";
+      break;
     } else {
       resultat.style.color = "red";
-      resultat.innerHTML =
-        "Passordet er ikke bra nok mangler spesiall tegn eller stor bokstav";
+      resultat.textContent =
+        "Passordet ditt er: " + passord + " og det er ikke bra nok.";
+      break;
     }
   }
 } //henter det man skriver og sjekker om den starter med stor bokstav og har spesialtegn og gir en alert med passordet og en melding om at det er bra, greit nok eller ikke bra nok
@@ -37,4 +42,13 @@ function closingModal2() {
   document.getElementById("passordmodal").classList.add("hiddenModal");
 } // lukker modalen med at den legger til og fjener spesefike classes åpner modalen med at den legger til og fjener spesefike classes
 
-// modal og sjekking av spesial karakter og stor bokstav er det nye
+function mørkemodus() {
+  document.body.style.backgroundColor = "black";
+  document.body.style.color = "white";
+  document.querySelector("p").style.border = "5px solid white";
+} // endrer bakgrunn, font til mørk modus og legger til en border på p taggen for å gjøre den mer synlig i mørk modus
+function lysmodus() {
+  document.body.style.backgroundColor = "blanchedalmond";
+  document.body.style.color = "black";
+  document.querySelector("p").style.border = "5px solid black";
+} // endrer bakgrunn, font til lys modus og legger til en border på p taggen for å gjøre den mer synlig i lys modus

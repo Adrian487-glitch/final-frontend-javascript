@@ -10,18 +10,28 @@
   <body>
     <h1>Passord sjekker</h1>
     <!-- overskrift -->
-    <button onclick="openingModal2()" class="test">Test passordet her</button>
+    <div class="container">
+      <button onclick="openingModal2()" class="åpen">Test passordet her</button>
+      <p>
+        Trykk på knapen og skriv inn et passord for å sjekke hvor bra det er.
+        men ikke skriv inn noe sensitivt!
+      </p>
+      <button id="mørkemodus" onclick="mørkemodus()" class="mørk">
+        Mørk modus
+      </button>
+      <button id="lysmodus" onclick="lysmodus()" class="mørk">Lys modus</button>
+    </div>
     <!-- knapp for å åpne modalen -->
     <div>
       <div id="passordmodal" class="hiddenModal">
         <div class="modalInnhold">
           <input placeholder="Passord" type="text" id="passord" />
-          <button onclick="passordSjekker()">Test</button>
+          <button class="test" onclick="passordSjekker()">Test</button>
           <!-- knapp for å teste passordet -->
           <br />
           <p id="resultat"></p>
           <br />
-          <button onclick="closingModal2()">Lukk</button>
+          <button class="lukk" onclick="closingModal2()">Lukk</button>
           <!-- knapp for å lukke modalen -->
         </div>
       </div>
