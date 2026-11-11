@@ -37,7 +37,16 @@ function visPassord() {
   } else {
     passordInput.type = "password";
   }
-}
+} // gjør at vis knappen viser oss hva det står
+
+const meter = document.getElementById("passordmeter");
+passord.addEventListener("input", function () {
+  let passordmeter = 0;
+  for (let i = 0; i < passord.value.length; i++) {
+    passordmeter += 10;
+  }
+  meter.value = passordmeter;
+}); // endrer på strength meteren
 
 console.log("hello world"); //teste om js filen er linka med html filen
 function openingModal2() {
@@ -77,7 +86,8 @@ function lysmodus() {
   document.getElementById("lysmodus").style.boxShadow = "none";
   document.getElementById("lysmodus").style.cursor = "default";
   document.getElementById("mørkemodus").style.color = "black";
-  document.getElementById("mørkemodus").style.backgroundColor = "white ";
+  document.getElementById("mørkemodus").style.backgroundColor =
+    "blanchedalmond";
   document.getElementById("mørkemodus").style.border = "1px solid black";
   document.getElementById("mørkemodus").style.cursor = "pointer";
   document.getElementById("mørkemodus").style.boxShadow =

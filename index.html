@@ -30,7 +30,14 @@
           <button class="test" onclick="passordSjekker()">Test</button>
           <!-- knapp for å teste passordet -->
           <br />
-          <meter id="passordmeter" max="4"></meter>
+          <meter
+            id="passordmeter"
+            min="0"
+            max="100"
+            low="25"
+            high="100"
+            optimum="50"
+          ></meter>
           <br />
           <p id="resultat"></p>
           <br />
