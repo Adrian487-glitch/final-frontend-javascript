@@ -2,31 +2,43 @@ function passordSjekker() {
   const passord = document.querySelector("#passord").value;
   const resultat = document.querySelector("#resultat");
   let harStorBokstav = false;
+  if (passord.length === 0) {
+    resultat.style.color = "white";
+    resultat.textContent = "Skriv inn passordet";
+  }
   for (let i = 0; i < passord.length; i++) {
     if (
-      passord.charAt(0) === passord.charAt(0).toUpperCase() &&
+      passord.charAt(i) === passord.charAt(i).toUpperCase() &&
+      passord.charAt(i) !== passord.charAt(i).toLowerCase()
+    ) {
+      harStorBokstav = true;
+    }
+    if (
+      harStorBokstav === true &&
       /[!@#$%^&*(),.?":{}|<>]/.test(passord) &&
       passord.length >= 5
     ) {
       resultat.style.color = "green";
       resultat.textContent =
-        "Passordet ditt er: " + passord + " og det er bra.";
+        "Passordet ditt er: " +
+        passord +
+        " det oppfyller alle kravene: minst 5 tegn, én stor bokstav og ett spesialtegn.";
       break;
     } else if (
-      passord.charAt(0) === passord.charAt(0).toUpperCase() ||
+      harStorBokstav === true ||
       /[!@#$%^&*(),.?":{}|<>]/.test(passord)
     ) {
       resultat.style.color = "orange";
       resultat.textContent =
         "Passordet ditt er: " +
         passord +
-        " og det er greit nok men bør være lengre.";
-      break;
+        " det oppfyller noen av kravene. Sjekk at det har minst 5 tegn, én stor bokstav og ett spesialtegn..";
     } else {
       resultat.style.color = "red";
       resultat.textContent =
-        "Passordet ditt er: " + passord + " og det er ikke bra nok.";
-      break;
+        "Passordet ditt er: " +
+        passord +
+        " det mangler stor bokstav og spesialtegn. Det må også være minst 5 tegn langt.";
     }
   }
 } //henter det man skriver og sjekker om den starter med stor bokstav og har spesialtegn og gir en alert med passordet og en melding om at det er bra, greit nok eller ikke bra nok
