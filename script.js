@@ -1,3 +1,6 @@
+// passord er tekst (string), minLengde er tall (number) og harStorBokstav er sann/usann (boolean).
+// Funksjonen tar imot to parametere: passordet og minste lengde.
+// = gir en verdi, >= sammenligner, && betyr og, og || betyr eller.
 function passordSjekker(passord, minLengde) {
   const resultat = document.querySelector("#resultat");
   let harStorBokstav = false; // setter harstorbokstav til usant
@@ -55,6 +58,7 @@ const meter = document.getElementById("passordmeter");
 passord.addEventListener("input", function () {
   let passordmeter = 0;
   let i = 0;
+  // Jeg bruker for og while som to typer løkker. Denne øker måleren med 10 for hvert tegn.
   while (i < passord.value.length) {
     passordmeter += 10;
     i += 1;
@@ -94,4 +98,5 @@ function lysmodus() {
   document.getElementById("mørkemodus").style.visibility = "visible";
 } // endrer bakgrunn, tesktfarge til lys modus og legger endrer borderfargen på p taggen for å gjøre den mer synlig i lys modus
 
-// dæm 2 tingene som e ny er modalen og charat metoden
+// Nye metoder æ har brukt e charAt som henter et tegn, classList.add som legger til en CSS-klasse og classList.remove som fjerner en CSS-klasse.
+// While-løkken e også ny for mæ.
