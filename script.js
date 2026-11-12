@@ -41,7 +41,7 @@ function passordSjekker() {
         " det mangler stor bokstav og spesialtegn. Det må også være minst 5 tegn langt."; // sjekker om den har ingen av delene gir rød tekst hvis kravene ikke  møtt
     }
   }
-} //henter det man skriver og sjekker om den starter med stor bokstav og har spesialtegn og gir en alert med passordet og en melding om at det er bra, greit nok eller ikke bra nok
+} //henter det man skriver og sjekker om den har med stor bokstav i passordet og har spesialtegn og viser det på modalen med passordet og en melding om at det er bra, greit nok eller ikke bra nok
 
 function visPassord() {
   const passordInput = document.querySelector("#passord");
@@ -56,10 +56,10 @@ const meter = document.getElementById("passordmeter");
 passord.addEventListener("input", function () {
   let passordmeter = 0;
   for (let i = 0; i < passord.value.length; i++) {
-    passordmeter += 10; // plusse på 10 på meteren for hver bokstav
+    passordmeter += 10; // plusse på 10 på meteren for hvert tegn
   }
   meter.value = passordmeter;
-}); // endrer på strength meteren med hvor mange bokstaver passordet har
+}); // endrer på strength meteren med hvor mange tegn passordet har
 
 console.log("hello world"); //teste om js filen er linka med html filen
 function openingModal2() {
@@ -70,13 +70,13 @@ function openingModal2() {
   }
   document.getElementById("passordmodal").classList.remove("hiddenModal");
   document.getElementById("passordmodal").classList.add("showModal");
-} // åpner modalen med at den legger til showmodal classen og fjener hiddenmodal classen
+} // åpner modalen med at den legger til showmodal classen og fjerner hiddenmodal classen
 
 function closingModal2() {
   resultat.textContent = "";
   document.getElementById("passordmodal").classList.remove("showModal");
   document.getElementById("passordmodal").classList.add("hiddenModal");
-} // lukker modalen med at den legger til hiddenmodal classen og fjener showmodal classen
+} // lukker modalen med at den legger til hiddenmodal classen og fjerner showmodal classen
 
 function mørkemodus() {
   document.body.style.backgroundColor = "black";

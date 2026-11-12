@@ -1,7 +1,7 @@
 body {
   background-color: blanchedalmond;
   font-family: Arial, Helvetica, sans-serif;
-} /* bakgrunn og font på hele dokumente */
+} /* bakgrunn og font på hele dokumentet */
 h1 {
   text-align: center;
   margin-top: 2%;
@@ -125,4 +125,4 @@ p {
   width: 50%;
   height: 20px;
   margin-top: 10px;
-} /*endrer på bredden, høyden oh plasseringen på passormetere ved at den flytter den litt ned */
+} /*endrer på bredden, høyden og plasseringen på passormetere ved at den flytter den litt ned */
