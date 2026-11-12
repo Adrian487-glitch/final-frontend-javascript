@@ -66,6 +66,7 @@ function openingModal2() {
   const passordInput = document.querySelector("#passord");
   if (passordInput.type === "text") {
     passordInput.type = "password";
+    // gjør at når man trykker på test passord her så endres input typen fra text til passord
   }
   document.getElementById("passordmodal").classList.remove("hiddenModal");
   document.getElementById("passordmodal").classList.add("showModal");
