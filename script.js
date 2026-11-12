@@ -22,7 +22,7 @@ function passordSjekker() {
       resultat.textContent =
         "Passordet ditt er: " +
         passord +
-        " det oppfyller alle kravene: minst 5 tegn, én stor bokstav og ett spesialtegn."; // sjekker om den har minst en stor bokstav, er minst 5 bokstaver lang og har et spesial tegn gir grønn tekst hvis kravene er møtt
+        " det oppfyller alle kravene: minst 5 tegn, én stor bokstav og ett spesialtegn."; // sjekker om den har minst en stor bokstav, er minst 5 tegn lang og har et spesial tegn gir grønn tekst hvis kravene er møtt
       break; // får koden til å hoppe ut av loopen
     } else if (
       harStorBokstav === true ||
@@ -59,7 +59,7 @@ passord.addEventListener("input", function () {
     passordmeter += 10; // plusse på 10 på meteren for hvert tegn
   }
   meter.value = passordmeter;
-}); // endrer på strength meteren med hvor mange tegn passordet har
+}); // endrer på lengdemåleren med hvor mange tegn passordet har
 
 console.log("hello world"); //teste om js filen er linka med html filen
 function openingModal2() {
@@ -84,13 +84,13 @@ function mørkemodus() {
   document.querySelector("p").style.border = "5px solid white";
   document.getElementById("mørkemodus").style.visibility = "hidden";
   document.getElementById("lysmodus").style.visibility = "visible";
-} // endrer bakgrunn, font til mørk modus og legger til en border på p taggen for å gjøre den mer synlig i mørk modus
+} // endrer bakgrunn, tekstfarge til mørk modus og legger endrer borderfargen på p taggen for å gjøre den mer synlig i mørk modus
 function lysmodus() {
   document.body.style.backgroundColor = "blanchedalmond";
   document.body.style.color = "black";
   document.querySelector("p").style.border = "5px solid black";
   document.getElementById("lysmodus").style.visibility = "hidden";
   document.getElementById("mørkemodus").style.visibility = "visible";
-} // endrer bakgrunn, font til lys modus og legger til en border på p taggen for å gjøre den mer synlig i lys modus
+} // endrer bakgrunn, tesktfarge til lys modus og legger endrer borderfargen på p taggen for å gjøre den mer synlig i lys modus
 
 // dæm 2 tingene som e ny er modalen og charat metoden
