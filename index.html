@@ -5,7 +5,7 @@
     <meta name="viewport" content="width='device-width', initial-scale=1.0" />
     <title>Passord sjekker</title>
     <link rel="stylesheet" href="style.css" />
-    <!-- kobler til style.css -->
+    <!-- kobler style.css til denne html filen -->
   </head>
   <body>
     <h1>Passord sjekker</h1>
@@ -16,10 +16,13 @@
         Trykk på knapen og skriv inn et passord for å sjekke hvor bra det er.
         men ikke skriv inn noe sensitivt!
       </p>
+      <!--legger inn info boksen-->
       <button id="mørkemodus" onclick="mørkemodus()" class="mørk">
         Mørk modus
       </button>
+      <!--lager knappen for å bytte til mørke modus-->
       <button id="lysmodus" onclick="lysmodus()" class="lys">Lys modus</button>
+      <!--lager knappen som endrer temaet til lysmodus-->
     </div>
     <!-- knapp for å åpne modalen -->
     <div>
@@ -28,7 +31,7 @@
           <input placeholder="Passord" type="password" id="passord" />
           <button class="vis" onclick="visPassord()">vis</button>
           <button class="test" onclick="passordSjekker()">Test</button>
-          <!-- knapp for å teste passordet -->
+          <!-- knapp for å teste passordet styrken -->
           <br />
           <meter
             id="passordmeter"
@@ -38,9 +41,11 @@
             high="100"
             optimum="50"
           ></meter>
-          <p style="font-size: 10px; color: white">lenght meter</p>
+          <!--en meter for å vise om passord lendgen er bra den går fra oransje til grønn-->
+          <p style="font-size: 10px; color: white">Lenght meter</p>
           <br />
           <p id="resultat"></p>
+          <!--setter inn den teksten i modalen som er rød, oransje eller grønn-->
           <br />
           <button class="lukk" onclick="closingModal2()">Lukk</button>
           <!-- knapp for å lukke modalen -->
@@ -48,6 +53,6 @@
       </div>
     </div>
     <script src="script.js" defer></script>
-    <!-- kobler til script.js -->
+    <!-- kobler til script.js til denne html filen -->
   </body>
 </html>

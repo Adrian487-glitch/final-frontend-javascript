@@ -1,7 +1,7 @@
 body {
   background-color: blanchedalmond;
   font-family: Arial, Helvetica, sans-serif;
-} /* bakgrunn og font */
+} /* bakgrunn og font på hele dokumente */
 h1 {
   text-align: center;
   margin-top: 2%;
@@ -25,7 +25,7 @@ h1 {
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 50px;
-} /* innholdet på modalen */
+} /* innholdet på modalen. endrer bakgrunn og flytte modalen til midten */
 #passord {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -47,7 +47,7 @@ h1 {
   font-size: 20px;
   margin-bottom: 10px;
   border-radius: 50px;
-} /*designe og flytte knappen */
+} /*endrer bakgrunnen og flytte test passordet her knappen */
 #passordmodal {
   background-color: rgba(0, 0, 0, 0.8);
   width: 100vw;
@@ -76,7 +76,7 @@ p {
   font-size: 20px;
   border-radius: 50px;
   visibility: hidden;
-} /* designe og flytte knappen */
+} /* endrer bakgrunnen, gjør den usynlig og flytter lys knappen */
 .mørk {
   visibility: visible;
   background-color: black;
@@ -88,7 +88,7 @@ p {
   text-align: center;
   font-size: 20px;
   border-radius: 50px;
-}
+} /* endrer bakgrunnen, gjør den synlig og flytter mørk knappen */
 .mørk:hover {
   background-color: rgb(107, 107, 107);
   box-shadow: 0px 7px 5px rgb(182, 181, 181);
@@ -105,24 +105,24 @@ p {
 .test,
 .vis {
   border-radius: 10px;
-}
+} /* gjør knappene inni modalen rund*/
 .lukk:hover {
   cursor: pointer;
   border: 3px solid white;
   background-color: rgb(107, 107, 107);
-}
+} /*forandrer på bakgrunnen, fargen på borderen og cursoren når man hoverer over denne knappen*/
 .test:hover {
   cursor: pointer;
   border: 3px solid white;
   background-color: rgb(107, 107, 107);
-}
+} /*forandrer på bakgrunnen, fargen på borderen og cursoren når man hoverer over denne knappen*/
 .vis:hover {
   cursor: pointer;
   border: 3px solid white;
   background-color: rgb(107, 107, 107);
-}
+} /*forandrer på bakgrunnen, fargen på borderen og cursoren når man hoverer over denne knappen*/
 #passordmeter {
   width: 50%;
   height: 20px;
   margin-top: 10px;
-}
+} /*endrer på bredden, høyden oh plasseringen på passormetere ved at den flytter den litt ned */
