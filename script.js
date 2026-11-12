@@ -63,6 +63,10 @@ passord.addEventListener("input", function () {
 
 console.log("hello world"); //teste om js filen er linka med html filen
 function openingModal2() {
+  const passordInput = document.querySelector("#passord");
+  if (passordInput.type === "text") {
+    passordInput.type = "password";
+  }
   document.getElementById("passordmodal").classList.remove("hiddenModal");
   document.getElementById("passordmodal").classList.add("showModal");
 } // åpner modalen med at den legger til showmodal classen og fjener hiddenmodal classen
