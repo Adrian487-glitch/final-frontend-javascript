@@ -1,5 +1,4 @@
-function passordSjekker() {
-  const passord = document.querySelector("#passord").value;
+function passordSjekker(passord, minLengde) {
   const resultat = document.querySelector("#resultat");
   let harStorBokstav = false; // setter harstorbokstav til usant
   if (passord.length === 0) {
@@ -16,7 +15,7 @@ function passordSjekker() {
     if (
       harStorBokstav === true &&
       /[!@#$%^&*(),.?":{}|<>]/.test(passord) &&
-      passord.length >= 5
+      passord.length >= minLengde
     ) {
       resultat.style.color = "green";
       resultat.textContent =
@@ -55,8 +54,10 @@ function visPassord() {
 const meter = document.getElementById("passordmeter");
 passord.addEventListener("input", function () {
   let passordmeter = 0;
-  for (let i = 0; i < passord.value.length; i++) {
-    passordmeter += 10; // plusse på 10 på meteren for hvert tegn
+  let i = 0;
+  while (i < passord.value.length) {
+    passordmeter += 10;
+    i += 1;
   }
   meter.value = passordmeter;
 }); // endrer på lengdemåleren med hvor mange tegn passordet har

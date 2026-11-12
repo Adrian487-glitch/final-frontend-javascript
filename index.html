@@ -30,7 +30,14 @@
         <div class="modalInnhold">
           <input placeholder="Passord" type="password" id="passord" />
           <button class="vis" onclick="visPassord()">vis</button>
-          <button class="test" onclick="passordSjekker()">Test</button>
+          <button
+            class="test"
+            onclick="
+              passordSjekker(document.querySelector('#passord').value, 5)
+            "
+          >
+            Test
+          </button>
           <!-- knapp for å teste passordet styrken -->
           <br />
           <meter
